@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Bulgarian: Speak BG — Data Deletion Guide. How to clear your learning data.">
+    <title>Learn Bulgarian: Speak BG — Data Deletion Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 50px;
+            max-width: 760px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 { color: #1A1A1A; font-size: 2.2em; margin-bottom: 10px; }
+        h2 { color: #1A1A1A; font-size: 1.3em; margin: 35px 0 15px; padding-top: 20px; border-top: 1px solid #f0f0f0; }
+        h3 { color: #1A1A1A; font-size: 1.05em; margin: 20px 0 10px; }
+
+        .subtitle { color: #666; font-size: 1em; margin-bottom: 30px; }
+
+        p { color: #444; line-height: 1.7; margin-bottom: 14px; }
+
+        ul, ol { color: #444; line-height: 1.7; margin: 10px 0 14px 20px; }
+        li { margin-bottom: 6px; }
+
+        a { color: #0D9488; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .warning-box {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 20px 0;
+        }
+
+        .warning-box p { margin-bottom: 0; color: #991b1b; }
+
+        .info-box {
+            background: #f0fdfa;
+            border-left: 4px solid #0D9488;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 15px 0;
+        }
+
+        .info-box p { margin-bottom: 0; }
+
+        .steps-list {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .steps-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .step-number {
+            background: #0D9488;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .faq-section {
+            background: #f8fafc;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .faq-item { margin-bottom: 20px; }
+        .faq-item:last-child { margin-bottom: 0; }
+        .faq-item h4 { color: #1A1A1A; margin-bottom: 8px; font-size: 1.02em; }
+        .faq-item p { color: #555; line-height: 1.6; margin-bottom: 0; }
+
+        .contact-card {
+            background: #f0fdfa;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 15px;
+        }
+
+        .contact-email {
+            font-size: 1.1em;
+            color: #0D9488;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-email:hover { text-decoration: underline; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .back-link:hover { color: #1A1A1A; }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 40px 25px; }
+            h1 { font-size: 1.7em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>&#128218; Data Deletion Guide</h1>
+        <p class="subtitle"><strong>Learn Bulgarian: Speak BG</strong> &mdash; How to clear or delete your data</p>
+
+        <div class="info-box">
+            <p><strong>Good news:</strong> Because Learn Bulgarian: Speak BG stores all your learning progress locally on your device (no accounts, no cloud sync), you have full control over your data at all times. Deleting the app completely removes your data — we have no copy of it.</p>
+        </div>
+
+        <h2>What Data Is Stored</h2>
+        <p>The following information is stored only on your device (AsyncStorage):</p>
+        <ul>
+            <li>Learning progress: completed scenarios, learned words, phrase strength scores, current level</li>
+            <li>Streak and daily study statistics</li>
+            <li>Gamification state: energy, coins, daily goal progress</li>
+            <li>Preferences: username, native language, companion choice, notification settings</li>
+            <li>Premium subscription status (mirrored locally from RevenueCat)</li>
+        </ul>
+        <p>The following is handled by third parties:</p>
+        <ul>
+            <li><strong>RevenueCat:</strong> Subscription and purchase history (if you subscribed to Premium)</li>
+            <li><strong>Google AdMob:</strong> Advertising identifier and ad interaction data (free users)</li>
+        </ul>
+        <p><strong>Voice recordings:</strong> Audio is processed in real time and never stored anywhere — no action needed.</p>
+
+        <h2>Option A: Clear All Local Data (keep the app)</h2>
+
+        <h3>On Android</h3>
+        <ul class="steps-list">
+            <li>
+                <div class="step-number">1</div>
+                <div>Open your device <strong>Settings</strong> app.</div>
+            </li>
+            <li>
+                <div class="step-number">2</div>
+                <div>Go to <strong>Apps</strong> (or "Application Manager" on some devices).</div>
+            </li>
+            <li>
+                <div class="step-number">3</div>
+                <div>Find and tap <strong>Learn Bulgarian: Speak BG</strong>.</div>
+            </li>
+            <li>
+                <div class="step-number">4</div>
+                <div>Tap <strong>Storage &amp; cache</strong>.</div>
+            </li>
+            <li>
+                <div class="step-number">5</div>
+                <div>Tap <strong>Clear Data</strong> (and optionally <strong>Clear Cache</strong>).</div>
+            </li>
+            <li>
+                <div class="step-number">6</div>
+                <div>Confirm the action. All local progress is permanently deleted. The app remains installed and starts fresh.</div>
+            </li>
+        </ul>
+
+        <h3>On iOS</h3>
+        <p>iOS does not provide a native "Clear App Data" option. To clear all local data on iOS, you must delete and reinstall the app (Option B below).</p>
+
+        <h2>Option B: Delete the App (removes all local data)</h2>
+
+        <div class="warning-box">
+            <p>&#9888;&#65039; <strong>This is permanent and irreversible.</strong> Deleting the app removes all local learning progress, streak, coins, and settings. We cannot recover this data. If you have a Premium subscription, you can restore it after reinstalling via Profile &#8594; Restore Purchases.</p>
+        </div>
+
+        <h3>On iOS</h3>
+        <ul class="steps-list">
+            <li>
+                <div class="step-number">1</div>
+                <div>Press and hold the <strong>Learn Bulgarian: Speak BG</strong> app icon on your home screen.</div>
+            </li>
+            <li>
+                <div class="step-number">2</div>
+                <div>Tap <strong>Remove App</strong> from the menu that appears.</div>
+            </li>
+            <li>
+                <div class="step-number">3</div>
+                <div>Tap <strong>Delete App</strong> to confirm.</div>
+            </li>
+            <li>
+                <div class="step-number">4</div>
+                <div>All app data is immediately deleted from your device.</div>
+            </li>
+        </ul>
+
+        <h3>On Android</h3>
+        <ul class="steps-list">
+            <li>
+                <div class="step-number">1</div>
+                <div>Press and hold the app icon, then tap <strong>Uninstall</strong>. Or go to Settings &#8594; Apps &#8594; Learn Bulgarian: Speak BG &#8594; Uninstall.</div>
+            </li>
+            <li>
+                <div class="step-number">2</div>
+                <div>Tap <strong>OK</strong> to confirm.</div>
+            </li>
+            <li>
+                <div class="step-number">3</div>
+                <div>All app data is deleted from your device.</div>
+            </li>
+        </ul>
+
+        <h2>Deleting RevenueCat Subscription Data</h2>
+        <p>If you subscribed to Premium and want your subscription history deleted from RevenueCat's servers, contact us and we will submit a deletion request on your behalf.</p>
+        <div class="contact-card">
+            <p style="margin-bottom: 10px; font-weight: 500;">Email us to request RevenueCat data deletion:</p>
+            <a href="mailto:bora.nikolai.mindwise@gmail.com?subject=Data Deletion Request" class="contact-email">
+                &#9993;&#65039; bora.nikolai.mindwise@gmail.com
+            </a>
+            <p style="margin-top: 12px; font-size: 0.9em; color: #666;">
+                Subject: "Data Deletion Request"<br>
+                Include: any relevant purchase information (e.g., approximate purchase date, platform used).
+            </p>
+            <p style="margin-top: 8px; font-size: 0.9em; color: #666;">
+                We process deletion requests within 30 days.
+            </p>
+        </div>
+
+        <h2>Opting Out of Advertising (AdMob)</h2>
+        <p>To limit ad tracking by Google AdMob:</p>
+        <ul>
+            <li><strong>iOS:</strong> Settings &#8594; Privacy &amp; Security &#8594; Tracking &#8594; turn off "Allow Apps to Request to Track"</li>
+            <li><strong>Android:</strong> Settings &#8594; Google &#8594; Ads &#8594; Delete Advertising ID</li>
+        </ul>
+
+        <div class="faq-section">
+            <h3 style="margin-top: 0; margin-bottom: 20px;">Frequently Asked Questions</h3>
+
+            <div class="faq-item">
+                <h4>Will deleting my data cancel my subscription?</h4>
+                <p>No. Deleting app data or the app itself does not cancel your subscription. Subscriptions are managed through the App Store or Google Play. To cancel, follow the instructions in Settings (iOS) or Google Play (Android). After reinstalling the app, tap "Restore Purchases" to re-activate your premium access.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I recover my progress after deleting the app?</h4>
+                <p>No. All learning data is stored locally. We do not have a backup of your progress. Once deleted, it cannot be recovered. Consider this carefully before clearing your data.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Are my voice recordings stored somewhere?</h4>
+                <p>No. Audio recordings made during speaking exercises are processed in real time and immediately discarded. There is nothing to delete — no audio is stored on our servers or on your device after the exercise completes.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How long does data deletion take?</h4>
+                <p>Local device data (your progress) is deleted immediately when you clear app data or delete the app. RevenueCat deletion requests are processed within 30 days. AdMob data is managed by Google per their retention policy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>I need a copy of my data before deleting. How?</h4>
+                <p>Contact us at <a href="mailto:bora.nikolai.mindwise@gmail.com">bora.nikolai.mindwise@gmail.com</a> with subject "Data Export Request." We can provide any server-side data we hold (primarily RevenueCat subscription history). Local device data is only accessible directly from your device.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">&#8592; Back to Legal Documents</a>
+
+        <div class="footer">
+            <p>&copy; 2025 Learn Bulgarian: Speak BG. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
