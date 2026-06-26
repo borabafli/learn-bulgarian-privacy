@@ -139,14 +139,14 @@
 <body>
     <div class="container">
         <h1>&#127463;&#127468; Privacy Policy</h1>
-        <p class="subtitle"><strong>Learn Bulgarian: Speak BG</strong> &mdash; Last updated: May 22, 2025</p>
+        <p class="subtitle"><strong>Learn Bulgarian: Speak BG</strong> &mdash; Last updated: June 26, 2026</p>
 
         <div class="summary-box">
             <h3>&#128274; Privacy at a Glance</h3>
             <ul>
                 <li><strong>No user accounts.</strong> We do not require sign-in; all learning progress is stored locally on your device only.</li>
-                <li><strong>Voice recordings are never stored.</strong> Audio from speaking exercises is processed in real time for pronunciation feedback and immediately discarded.</li>
-                <li><strong>No backend database.</strong> We do not maintain a server-side profile for you.</li>
+                <li><strong>Voice recordings are never stored by us.</strong> Audio from speaking exercises is sent over HTTPS to our speech service, transcribed by OpenAI for pronunciation feedback, and not retained by us.</li>
+                <li><strong>No user profile or account database.</strong> We do not maintain a server-side profile for you; we only keep an anonymous request counter to rate-limit the speech service against abuse.</li>
                 <li><strong>Ads use device advertising IDs.</strong> Free users see ads via Google AdMob; you can opt out via your device settings.</li>
                 <li><strong>Subscriptions via RevenueCat.</strong> Purchase data is managed by RevenueCat under their privacy policy.</li>
                 <li><strong>We do not sell your data.</strong> Ever.</li>
@@ -203,11 +203,11 @@
         <h3>2.2 Audio Data (Speaking Exercises)</h3>
         <p>When you complete a speaking exercise, the App records a short audio clip through your device microphone. This audio is:</p>
         <ul>
-            <li>Encoded and sent over HTTPS to a speech recognition service (Supabase Edge Function)</li>
-            <li>Processed to compare your pronunciation against the target phrase</li>
-            <li>Immediately discarded — it is <strong>not stored, logged, or retained</strong> on any server</li>
+            <li>Encoded and sent over HTTPS to our speech recognition service (a Supabase Edge Function)</li>
+            <li>Forwarded by that service to <strong>OpenAI's audio transcription API</strong>, which converts the clip to text so we can compare your pronunciation against the target phrase</li>
+            <li>Not stored, logged, or retained by us after the result is returned</li>
         </ul>
-        <p>The service returns only a similarity score and transcript. No audio file is retained after processing.</p>
+        <p>The service returns only a similarity score and transcript. We do not keep the audio file. OpenAI processes the audio as our sub-processor under their API terms; per OpenAI's policy, API audio is not used to train their models and is retained by OpenAI only transiently for abuse monitoring. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.</p>
 
         <h3>2.3 Subscription and Purchase Data (RevenueCat)</h3>
         <p>When you purchase a premium subscription, the transaction is handled by Apple App Store or Google Play and managed by RevenueCat. RevenueCat may collect:</p>
@@ -280,7 +280,7 @@
         </ul>
 
         <h2 id="speech-processing">6. Speech Processing Details</h2>
-        <p>Speaking exercises are powered by a speech-recognition service hosted on Supabase Edge Functions.</p>
+        <p>Speaking exercises are powered by a speech-recognition service hosted on Supabase Edge Functions, which uses <strong>OpenAI's audio transcription API</strong> to convert your recorded speech to text.</p>
         <p><strong>What is sent:</strong></p>
         <ul>
             <li>Audio file (base64 encoded, short clip — typically 2–10 seconds)</li>
@@ -294,8 +294,9 @@
             <li>Similarity score (0–1)</li>
             <li>Normalized text</li>
         </ul>
-        <p><strong>What is retained:</strong> Nothing. The Edge Function processes the request in memory and returns only the analysis result. No audio data is written to any database or storage bucket.</p>
-        <p>All communication with the speech service uses HTTPS with TLS encryption.</p>
+        <p><strong>What is retained by us:</strong> Nothing. The Edge Function processes the request in memory and returns only the analysis result. No audio data is written to any database or storage bucket on our side. The only record we keep is an anonymous per-client request counter used to rate-limit the service against abuse (no audio, transcript, or personal identifier is stored in it).</p>
+        <p><strong>OpenAI's role:</strong> The audio clip is transmitted to OpenAI solely to generate the transcript. Under OpenAI's API terms, this audio is not used to train their models and is retained by OpenAI only transiently for abuse monitoring before deletion.</p>
+        <p>All communication with the speech service and OpenAI uses HTTPS with TLS encryption.</p>
 
         <h2 id="storage-security">7. Data Storage &amp; Security</h2>
         <p><strong>Local data (AsyncStorage):</strong> Stored on your device's sandboxed storage. Protected by your device's OS-level security (encryption at rest on modern iOS and Android). Cleared when you delete the app or clear app data.</p>
@@ -309,7 +310,8 @@
         <ul>
             <li><strong>RevenueCat</strong> — subscription and entitlement management (acting as a data processor)</li>
             <li><strong>Google AdMob</strong> — ad serving for free users (acting as a data controller for advertising data)</li>
-            <li><strong>Supabase</strong> — speech recognition processing (acting as a data processor; no data is retained)</li>
+            <li><strong>Supabase</strong> — hosts the speech recognition Edge Function (acting as a data processor; no audio is retained)</li>
+            <li><strong>OpenAI</strong> — audio transcription for pronunciation scoring (acting as a sub-processor; audio not used for model training)</li>
             <li><strong>Apple / Google</strong> — app distribution and in-app purchase validation</li>
             <li><strong>Legal requirements</strong> — if required by law, court order, or to protect rights and safety</li>
             <li><strong>Business transfer</strong> — in the unlikely event of a merger or acquisition, you will be notified in advance</li>
@@ -391,9 +393,15 @@
             </tr>
             <tr>
                 <td>Supabase</td>
-                <td>Speech recognition Edge Function</td>
+                <td>Hosts speech recognition Edge Function</td>
                 <td>Audio (transient, not stored), phrase text</td>
                 <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+            </tr>
+            <tr>
+                <td>OpenAI</td>
+                <td>Audio-to-text transcription for pronunciation scoring</td>
+                <td>Audio (transient; not used for training), phrase text</td>
+                <td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a></td>
             </tr>
             <tr>
                 <td>Apple App Store</td>
@@ -439,10 +447,10 @@
         <p>If your appeal is denied, you may contact your state's attorney general. <a href="https://oag.ca.gov/contact/consumer-complaint-against-business-or-company" target="_blank" rel="noopener">California Department of Justice — Consumer Complaint</a>.</p>
 
         <h2 id="international">16. International Data Transfers</h2>
-        <p>The App is operated from Bulgaria. Data processed by our third-party services (RevenueCat, AdMob, Supabase) may be transferred to and processed in the United States and other countries.</p>
+        <p>The App is operated from Bulgaria. Data processed by our third-party services (RevenueCat, AdMob, Supabase, OpenAI) may be transferred to and processed in the United States and other countries.</p>
         <ul>
             <li><strong>Bulgaria:</strong> Where the App is developed and operated.</li>
-            <li><strong>United States:</strong> RevenueCat, Google AdMob, Supabase (AWS infrastructure).</li>
+            <li><strong>United States:</strong> RevenueCat, Google AdMob, Supabase (AWS infrastructure), OpenAI.</li>
         </ul>
         <p>Where required by GDPR, these transfers are made under Standard Contractual Clauses (SCCs) or other approved transfer mechanisms. For EEA users, you may contact us for details about applicable transfer safeguards.</p>
 
@@ -468,7 +476,7 @@
         <a href="index.html" class="back-link">&#8592; Back to Legal Documents</a>
 
         <div class="footer">
-            <p>&copy; 2025 Learn Bulgarian: Speak BG. All rights reserved.</p>
+            <p>&copy; 2026 Learn Bulgarian: Speak BG. All rights reserved.</p>
         </div>
     </div>
 </body>
