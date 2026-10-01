@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Dutch: Speak NL: learn Dutch through real Amsterdam situations, speaking practice and smart reviews.">
+  <title>Learn Dutch: Speak NL</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #4F7F2A 0%, #2F5418 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+.container {
+  background: #FFFDF8;
+  border-radius: 20px;
+  padding: 56px 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+h1 { color: #1F2A14; font-size: 2.3em; margin-bottom: 10px; letter-spacing: -0.5px; }
+h2 { color: #1F2A14; font-size: 1.35em; margin: 40px 0 14px; padding-top: 20px; border-top: 1px solid #EFE7D8; }
+h3 { color: #1F2A14; font-size: 1.08em; margin: 20px 0 10px; }
+.subtitle { color: #666; font-size: 1em; margin-bottom: 30px; }
+p { color: #444; line-height: 1.7; margin-bottom: 14px; }
+ul, ol { color: #444; line-height: 1.7; margin: 10px 0 14px 22px; }
+li { margin-bottom: 6px; }
+a { color: #3E6B1F; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+code { background: #F2EEE4; padding: 1px 6px; border-radius: 5px; font-size: 0.92em; }
+.summary-box { background: #F3F8EC; border: 1px solid #CFE3B8; border-radius: 12px; padding: 24px 28px; margin-bottom: 36px; }
+.summary-box h3 { margin-top: 0; color: #3E6B1F; }
+.summary-box li { margin-bottom: 8px; color: #374151; }
+.toc { background: #F7F4EC; border-radius: 12px; padding: 20px 28px; margin-bottom: 36px; }
+.toc h3 { margin-top: 0; margin-bottom: 12px; }
+.toc li { margin-bottom: 4px; font-size: 0.95em; }
+.info-box { background: #F3F8EC; border-left: 4px solid #4F7F2A; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+.warning-box { background: #FEF2F2; border-left: 4px solid #DC2626; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+th { background: #F3F8EC; color: #3E6B1F; text-align: left; padding: 10px 14px; border: 1px solid #CFE3B8; font-weight: 600; }
+td { padding: 10px 14px; border: 1px solid #E5E7EB; vertical-align: top; color: #444; }
+tr:nth-child(even) td { background: #FAF8F2; }
+.contact-info { background: #F3F8EC; border-radius: 12px; padding: 22px 28px; margin-top: 15px; }
+.steps { counter-reset: step; list-style: none; margin-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 12px; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 13px; background: #4F7F2A; color: #fff; font-weight: 700; font-size: 0.85em; display: flex; align-items: center; justify-content: center; }
+.faq h3 { margin-top: 24px; }
+.back-link { display: inline-block; margin-top: 40px; color: #666; font-size: 0.9em; }
+.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #EFE7D8; color: #999; font-size: 0.9em; text-align: center; }
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { font-size: 2.8em; }
+.tagline { color: #3E6B1F; font-size: 1.05em; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
+.description { color: #555; font-size: 1.08em; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+.section-title { font-size: 0.9em; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; font-weight: 600; text-align: center; }
+.links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.link-button { display: flex; align-items: center; justify-content: center; padding: 15px 20px; background: #F7F4EC; color: #444; border-radius: 12px; font-weight: 600; border: 1px solid #E8E0CE; transition: all 0.2s; }
+.link-button:hover { transform: translateY(-2px); border-color: #4F7F2A; color: #3E6B1F; text-decoration: none; }
+.link-button.primary { background: linear-gradient(135deg, #4F7F2A 0%, #3E6B1F 100%); color: #fff; border: none; }
+.link-button.primary:hover { color: #fff; box-shadow: 0 10px 25px rgba(79, 127, 42, 0.35); }
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  .container { padding: 36px 22px; }
+  h1, .hero h1 { font-size: 1.8em; }
+  table { font-size: 0.85em; display: block; overflow-x: auto; }
+  .links-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <h1>Learn Dutch</h1>
+      <p class="tagline">Speak NL &mdash; Learn Dutch in real Amsterdam moments</p>
+      <p class="description">
+        Learn Dutch through short lessons set in everyday Amsterdam situations: ordering coffee, taking the
+        tram, visiting the pharmacy and meeting new people. Practise listening and speaking, build the habit
+        with streaks and smart reviews, and learn with Fleur and Daan as your guides.
+      </p>
+    </div>
+    <p class="section-title">Resources and support</p>
+    <div class="links-grid">
+      <a href="support.html" class="link-button primary">App support</a>
+      <a href="privacy-policy.html" class="link-button">Privacy policy</a>
+      <a href="terms-of-service.html" class="link-button">Terms of service</a>
+      <a href="data-deletion.html" class="link-button">Data deletion</a>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 Learn Dutch: Speak NL. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

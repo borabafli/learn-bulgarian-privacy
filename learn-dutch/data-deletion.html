@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to clear or delete your Learn Dutch: Speak NL data.">
+  <title>Learn Dutch: Speak NL - Data Deletion</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #4F7F2A 0%, #2F5418 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+.container {
+  background: #FFFDF8;
+  border-radius: 20px;
+  padding: 56px 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+h1 { color: #1F2A14; font-size: 2.3em; margin-bottom: 10px; letter-spacing: -0.5px; }
+h2 { color: #1F2A14; font-size: 1.35em; margin: 40px 0 14px; padding-top: 20px; border-top: 1px solid #EFE7D8; }
+h3 { color: #1F2A14; font-size: 1.08em; margin: 20px 0 10px; }
+.subtitle { color: #666; font-size: 1em; margin-bottom: 30px; }
+p { color: #444; line-height: 1.7; margin-bottom: 14px; }
+ul, ol { color: #444; line-height: 1.7; margin: 10px 0 14px 22px; }
+li { margin-bottom: 6px; }
+a { color: #3E6B1F; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+code { background: #F2EEE4; padding: 1px 6px; border-radius: 5px; font-size: 0.92em; }
+.summary-box { background: #F3F8EC; border: 1px solid #CFE3B8; border-radius: 12px; padding: 24px 28px; margin-bottom: 36px; }
+.summary-box h3 { margin-top: 0; color: #3E6B1F; }
+.summary-box li { margin-bottom: 8px; color: #374151; }
+.toc { background: #F7F4EC; border-radius: 12px; padding: 20px 28px; margin-bottom: 36px; }
+.toc h3 { margin-top: 0; margin-bottom: 12px; }
+.toc li { margin-bottom: 4px; font-size: 0.95em; }
+.info-box { background: #F3F8EC; border-left: 4px solid #4F7F2A; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+.warning-box { background: #FEF2F2; border-left: 4px solid #DC2626; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+th { background: #F3F8EC; color: #3E6B1F; text-align: left; padding: 10px 14px; border: 1px solid #CFE3B8; font-weight: 600; }
+td { padding: 10px 14px; border: 1px solid #E5E7EB; vertical-align: top; color: #444; }
+tr:nth-child(even) td { background: #FAF8F2; }
+.contact-info { background: #F3F8EC; border-radius: 12px; padding: 22px 28px; margin-top: 15px; }
+.steps { counter-reset: step; list-style: none; margin-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 12px; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 13px; background: #4F7F2A; color: #fff; font-weight: 700; font-size: 0.85em; display: flex; align-items: center; justify-content: center; }
+.faq h3 { margin-top: 24px; }
+.back-link { display: inline-block; margin-top: 40px; color: #666; font-size: 0.9em; }
+.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #EFE7D8; color: #999; font-size: 0.9em; text-align: center; }
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { font-size: 2.8em; }
+.tagline { color: #3E6B1F; font-size: 1.05em; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
+.description { color: #555; font-size: 1.08em; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+.section-title { font-size: 0.9em; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; font-weight: 600; text-align: center; }
+.links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.link-button { display: flex; align-items: center; justify-content: center; padding: 15px 20px; background: #F7F4EC; color: #444; border-radius: 12px; font-weight: 600; border: 1px solid #E8E0CE; transition: all 0.2s; }
+.link-button:hover { transform: translateY(-2px); border-color: #4F7F2A; color: #3E6B1F; text-decoration: none; }
+.link-button.primary { background: linear-gradient(135deg, #4F7F2A 0%, #3E6B1F 100%); color: #fff; border: none; }
+.link-button.primary:hover { color: #fff; box-shadow: 0 10px 25px rgba(79, 127, 42, 0.35); }
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  .container { padding: 36px 22px; }
+  h1, .hero h1 { font-size: 1.8em; }
+  table { font-size: 0.85em; display: block; overflow-x: auto; }
+  .links-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Data Deletion Guide</h1>
+    <p class="subtitle"><strong>Learn Dutch: Speak NL</strong> &mdash; How to clear or delete your data</p>
+
+    <div class="info-box">
+      <p>Learn Dutch: Speak NL has no accounts and no cloud sync. Your learning data lives on your device, so you are always in control of it, and we have no copy to delete.</p>
+    </div>
+
+    <h2>What is stored where</h2>
+    <p><strong>On your device only:</strong></p>
+    <ul>
+      <li>lesson progress, learned words and phrases, phrase strength and review schedule</li>
+      <li>streak, daily statistics, energy, coins and daily goal</li>
+      <li>preferences: app language, companion, display name, reminder settings and onboarding answers</li>
+      <li>premium status mirrored from RevenueCat</li>
+    </ul>
+    <p><strong>With third parties:</strong></p>
+    <ul>
+      <li><strong>RevenueCat:</strong> subscription and purchase history, if you subscribed</li>
+      <li><strong>Google AdMob:</strong> advertising data, if you use the free version</li>
+      <li><strong>Voice clips:</strong> processed in real time and not stored by us. Nothing to delete.</li>
+    </ul>
+
+    <h2>Option A: Reset your progress in the App</h2>
+    <ol class="steps">
+      <li>Open the <strong>Progress</strong> tab.</li>
+      <li>Scroll to the Profile section and tap <strong>Reset journey</strong>.</li>
+      <li>Confirm with <strong>Reset</strong>. Lesson progress, phrase strength, streak, coins and today's goal are cleared and you start again from lesson 1.</li>
+    </ol>
+
+    <h2>Option B: Clear all App data on Android</h2>
+    <ol class="steps">
+      <li>Open <strong>Settings</strong> &gt; <strong>Apps</strong>.</li>
+      <li>Tap <strong>Learn Dutch: Speak NL</strong> &gt; <strong>Storage &amp; cache</strong>.</li>
+      <li>Tap <strong>Clear storage</strong> and confirm. The App stays installed and starts fresh.</li>
+    </ol>
+
+    <h2>Option C: Delete the App (iOS and Android)</h2>
+    <div class="warning-box">
+      <p><strong>This is permanent.</strong> All progress, streak, coins and settings are removed and cannot be recovered. A subscription is not cancelled by deleting the App; you can restore it after reinstalling.</p>
+    </div>
+    <ol class="steps">
+      <li><strong>iOS:</strong> press and hold the App icon, tap <strong>Remove App</strong>, then <strong>Delete App</strong>.</li>
+      <li><strong>Android:</strong> press and hold the App icon and tap <strong>Uninstall</strong>, or use Settings &gt; Apps &gt; Learn Dutch: Speak NL &gt; Uninstall.</li>
+    </ol>
+
+    <h2>Delete subscription data at RevenueCat</h2>
+    <div class="contact-info">
+      <p>Email <a href="mailto:bora.nikolai.mindwise@gmail.com?subject=Data%20Deletion%20Request">bora.nikolai.mindwise@gmail.com</a> with the subject "Data Deletion Request". Tell us the platform and roughly when you subscribed. We forward the request to RevenueCat and confirm within 30 days. Apple and Google keep their own purchase records under their policies.</p>
+    </div>
+
+    <h2>Advertising choices</h2>
+    <ul>
+      <li><strong>EEA, UK and Switzerland:</strong> open the Progress tab and tap <strong>Privacy choices</strong> to change your ad consent choices.</li>
+      <li><strong>Everywhere:</strong> the App requests non-personalised ads only.</li>
+      <li><strong>iOS:</strong> the App does not request tracking permission, so the iOS advertising identifier is not used.</li>
+      <li><strong>Android:</strong> Settings &gt; Google &gt; Ads (or Settings &gt; Privacy &gt; Ads) &gt; Delete advertising ID.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <h3>Does deleting my data cancel my subscription?</h3>
+      <p>No. Cancel in your App Store or Google Play subscription settings. After reinstalling, tap Restore purchases in the Progress tab.</p>
+      <h3>Can I get my progress back after deleting it?</h3>
+      <p>No. We have no backup because your progress never leaves your device.</p>
+      <h3>Are my voice recordings stored anywhere?</h3>
+      <p>No. Clips are processed in real time and discarded. Nothing stays on our servers or on your device after the exercise.</p>
+      <h3>Can I get a copy of my data?</h3>
+      <p>Email us with the subject "Data Export Request". The only server-side data linked to the App is your RevenueCat subscription history, which we can request for you.</p>
+    </div>
+
+    <a href="index.html" class="back-link">Back to legal documents</a>
+    <div class="footer">
+      <p>&copy; 2026 Learn Dutch: Speak NL. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

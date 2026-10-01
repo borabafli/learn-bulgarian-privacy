@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Dutch: Speak NL support and frequently asked questions.">
+  <title>Learn Dutch: Speak NL - Support</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #4F7F2A 0%, #2F5418 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+.container {
+  background: #FFFDF8;
+  border-radius: 20px;
+  padding: 56px 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+h1 { color: #1F2A14; font-size: 2.3em; margin-bottom: 10px; letter-spacing: -0.5px; }
+h2 { color: #1F2A14; font-size: 1.35em; margin: 40px 0 14px; padding-top: 20px; border-top: 1px solid #EFE7D8; }
+h3 { color: #1F2A14; font-size: 1.08em; margin: 20px 0 10px; }
+.subtitle { color: #666; font-size: 1em; margin-bottom: 30px; }
+p { color: #444; line-height: 1.7; margin-bottom: 14px; }
+ul, ol { color: #444; line-height: 1.7; margin: 10px 0 14px 22px; }
+li { margin-bottom: 6px; }
+a { color: #3E6B1F; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+code { background: #F2EEE4; padding: 1px 6px; border-radius: 5px; font-size: 0.92em; }
+.summary-box { background: #F3F8EC; border: 1px solid #CFE3B8; border-radius: 12px; padding: 24px 28px; margin-bottom: 36px; }
+.summary-box h3 { margin-top: 0; color: #3E6B1F; }
+.summary-box li { margin-bottom: 8px; color: #374151; }
+.toc { background: #F7F4EC; border-radius: 12px; padding: 20px 28px; margin-bottom: 36px; }
+.toc h3 { margin-top: 0; margin-bottom: 12px; }
+.toc li { margin-bottom: 4px; font-size: 0.95em; }
+.info-box { background: #F3F8EC; border-left: 4px solid #4F7F2A; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+.warning-box { background: #FEF2F2; border-left: 4px solid #DC2626; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+th { background: #F3F8EC; color: #3E6B1F; text-align: left; padding: 10px 14px; border: 1px solid #CFE3B8; font-weight: 600; }
+td { padding: 10px 14px; border: 1px solid #E5E7EB; vertical-align: top; color: #444; }
+tr:nth-child(even) td { background: #FAF8F2; }
+.contact-info { background: #F3F8EC; border-radius: 12px; padding: 22px 28px; margin-top: 15px; }
+.steps { counter-reset: step; list-style: none; margin-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 12px; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 13px; background: #4F7F2A; color: #fff; font-weight: 700; font-size: 0.85em; display: flex; align-items: center; justify-content: center; }
+.faq h3 { margin-top: 24px; }
+.back-link { display: inline-block; margin-top: 40px; color: #666; font-size: 0.9em; }
+.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #EFE7D8; color: #999; font-size: 0.9em; text-align: center; }
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { font-size: 2.8em; }
+.tagline { color: #3E6B1F; font-size: 1.05em; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
+.description { color: #555; font-size: 1.08em; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+.section-title { font-size: 0.9em; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; font-weight: 600; text-align: center; }
+.links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.link-button { display: flex; align-items: center; justify-content: center; padding: 15px 20px; background: #F7F4EC; color: #444; border-radius: 12px; font-weight: 600; border: 1px solid #E8E0CE; transition: all 0.2s; }
+.link-button:hover { transform: translateY(-2px); border-color: #4F7F2A; color: #3E6B1F; text-decoration: none; }
+.link-button.primary { background: linear-gradient(135deg, #4F7F2A 0%, #3E6B1F 100%); color: #fff; border: none; }
+.link-button.primary:hover { color: #fff; box-shadow: 0 10px 25px rgba(79, 127, 42, 0.35); }
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  .container { padding: 36px 22px; }
+  h1, .hero h1 { font-size: 1.8em; }
+  table { font-size: 0.85em; display: block; overflow-x: auto; }
+  .links-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Support</h1>
+    <p class="subtitle">Help with <strong>Learn Dutch: Speak NL</strong></p>
+    <p>Questions, a problem with the App, or feedback on a lesson? We are happy to help. Native Dutch speakers who spot an unnatural phrase are especially welcome to write.</p>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:bora.nikolai.mindwise@gmail.com?subject=Learn%20Dutch%20support">bora.nikolai.mindwise@gmail.com</a></p>
+      <p>We aim to answer within 24 to 48 hours. Please mention your device model and, for lesson feedback, the lesson title.</p>
+    </div>
+
+    <h2>Common topics</h2>
+    <ul>
+      <li>Speaking practice and pronunciation feedback</li>
+      <li>Subscriptions, free trials and restoring purchases</li>
+      <li>Energy and daily limits</li>
+      <li>Reminders and streaks</li>
+      <li>Privacy and data deletion</li>
+      <li>Corrections to lesson content</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <h3>How does speaking practice work?</h3>
+      <p>A speaking exercise records a short clip with your microphone. It is sent securely to our speech service, which has OpenAI transcribe it, compares the result with the Dutch phrase and returns a score. The audio is processed in real time and never stored by us.</p>
+
+      <h3>What is energy?</h3>
+      <p>Energy sets how many exercises you can do per day on the free plan. You get 80 energy a day. An exercise costs 1 energy, a speaking exercise 2, and a wrong answer 1 extra. You can watch a rewarded ad for 5 more. Premium has unlimited energy.</p>
+
+      <h3>What is the difference between Free and Premium?</h3>
+      <p>Every lesson is available on both. Premium removes ads and gives unlimited energy and unlimited, longer smart reviews. Plans, prices and any free trial are shown in the App before you subscribe.</p>
+
+      <h3>How do I cancel my subscription or free trial?</h3>
+      <p>On iOS: Settings &gt; [your name] &gt; Subscriptions &gt; Learn Dutch: Speak NL &gt; Cancel Subscription. On Android: Google Play &gt; Profile &gt; Payments &amp; subscriptions &gt; Subscriptions. Cancel at least 24 hours before the trial or period ends to avoid the next charge. Deleting the App does not cancel a subscription.</p>
+
+      <h3>How do I restore my purchase?</h3>
+      <p>Open the Progress tab and tap Restore purchases while signed in to the Apple ID or Google account you bought with.</p>
+
+      <h3>The App does not recognise what I say. What can I do?</h3>
+      <p>Speak at a normal pace in a quiet place, hold the phone close, and check that microphone access is on in your device settings. Speech recognition is approximate, so a near miss is normal at the start.</p>
+
+      <h3>Why are there no audio buttons in some exercises?</h3>
+      <p>Audio is added phrase by phrase. Where a recording is not available yet, the exercise shows the pronunciation hint instead.</p>
+
+      <h3>Can I move my progress to a new phone?</h3>
+      <p>Not at the moment. Progress is stored on your device only and there is no account. Your subscription can be restored on any device with the same Apple ID or Google account.</p>
+
+      <h3>Is my data safe?</h3>
+      <p>Your progress never leaves your device. Voice clips are processed for feedback and not stored by us. We do not sell data. See the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+      <h3>How do I delete my data?</h3>
+      <p>Use Reset journey in the Progress tab, or delete the App. See the <a href="data-deletion.html">Data Deletion Guide</a>.</p>
+    </div>
+
+    <h2>More</h2>
+    <ul>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-service.html">Terms of Service</a></li>
+      <li><a href="data-deletion.html">Data Deletion Guide</a></li>
+    </ul>
+
+    <a href="index.html" class="back-link">Back to legal documents</a>
+    <div class="footer">
+      <p>&copy; 2026 Learn Dutch: Speak NL. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

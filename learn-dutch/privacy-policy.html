@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Dutch: Speak NL privacy policy: how the app handles your data.">
+  <title>Learn Dutch: Speak NL - Privacy Policy</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #4F7F2A 0%, #2F5418 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+.container {
+  background: #FFFDF8;
+  border-radius: 20px;
+  padding: 56px 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+h1 { color: #1F2A14; font-size: 2.3em; margin-bottom: 10px; letter-spacing: -0.5px; }
+h2 { color: #1F2A14; font-size: 1.35em; margin: 40px 0 14px; padding-top: 20px; border-top: 1px solid #EFE7D8; }
+h3 { color: #1F2A14; font-size: 1.08em; margin: 20px 0 10px; }
+.subtitle { color: #666; font-size: 1em; margin-bottom: 30px; }
+p { color: #444; line-height: 1.7; margin-bottom: 14px; }
+ul, ol { color: #444; line-height: 1.7; margin: 10px 0 14px 22px; }
+li { margin-bottom: 6px; }
+a { color: #3E6B1F; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+code { background: #F2EEE4; padding: 1px 6px; border-radius: 5px; font-size: 0.92em; }
+.summary-box { background: #F3F8EC; border: 1px solid #CFE3B8; border-radius: 12px; padding: 24px 28px; margin-bottom: 36px; }
+.summary-box h3 { margin-top: 0; color: #3E6B1F; }
+.summary-box li { margin-bottom: 8px; color: #374151; }
+.toc { background: #F7F4EC; border-radius: 12px; padding: 20px 28px; margin-bottom: 36px; }
+.toc h3 { margin-top: 0; margin-bottom: 12px; }
+.toc li { margin-bottom: 4px; font-size: 0.95em; }
+.info-box { background: #F3F8EC; border-left: 4px solid #4F7F2A; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+.warning-box { background: #FEF2F2; border-left: 4px solid #DC2626; padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+th { background: #F3F8EC; color: #3E6B1F; text-align: left; padding: 10px 14px; border: 1px solid #CFE3B8; font-weight: 600; }
+td { padding: 10px 14px; border: 1px solid #E5E7EB; vertical-align: top; color: #444; }
+tr:nth-child(even) td { background: #FAF8F2; }
+.contact-info { background: #F3F8EC; border-radius: 12px; padding: 22px 28px; margin-top: 15px; }
+.steps { counter-reset: step; list-style: none; margin-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 12px; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 13px; background: #4F7F2A; color: #fff; font-weight: 700; font-size: 0.85em; display: flex; align-items: center; justify-content: center; }
+.faq h3 { margin-top: 24px; }
+.back-link { display: inline-block; margin-top: 40px; color: #666; font-size: 0.9em; }
+.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #EFE7D8; color: #999; font-size: 0.9em; text-align: center; }
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { font-size: 2.8em; }
+.tagline { color: #3E6B1F; font-size: 1.05em; font-weight: 700; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
+.description { color: #555; font-size: 1.08em; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+.section-title { font-size: 0.9em; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; font-weight: 600; text-align: center; }
+.links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.link-button { display: flex; align-items: center; justify-content: center; padding: 15px 20px; background: #F7F4EC; color: #444; border-radius: 12px; font-weight: 600; border: 1px solid #E8E0CE; transition: all 0.2s; }
+.link-button:hover { transform: translateY(-2px); border-color: #4F7F2A; color: #3E6B1F; text-decoration: none; }
+.link-button.primary { background: linear-gradient(135deg, #4F7F2A 0%, #3E6B1F 100%); color: #fff; border: none; }
+.link-button.primary:hover { color: #fff; box-shadow: 0 10px 25px rgba(79, 127, 42, 0.35); }
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  .container { padding: 36px 22px; }
+  h1, .hero h1 { font-size: 1.8em; }
+  table { font-size: 0.85em; display: block; overflow-x: auto; }
+  .links-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Privacy Policy</h1>
+    <p class="subtitle"><strong>Learn Dutch: Speak NL</strong> &mdash; Last updated: October 1, 2026</p>
+
+    <div class="summary-box">
+      <h3>Privacy at a glance</h3>
+      <ul>
+        <li><strong>No accounts.</strong> You never sign in. Your learning progress is stored on your device only.</li>
+        <li><strong>Voice recordings are not stored by us.</strong> A speaking exercise sends a short clip over HTTPS to our speech service, which has OpenAI transcribe it and returns a score. We do not keep the audio.</li>
+        <li><strong>No analytics of our own.</strong> The App contains no analytics, crash-reporting or profiling tools of ours.</li>
+        <li><strong>Ads in the free version.</strong> Free users see non-personalised ads from Google AdMob. In the EEA, the UK and Switzerland, Google's consent message asks for your ad choices first, and you can change them in the App. The App does not ask iOS for permission to track you.</li>
+        <li><strong>Subscriptions</strong> are processed by Apple or Google and managed through RevenueCat.</li>
+        <li><strong>We do not sell your data.</strong></li>
+      </ul>
+    </div>
+
+    <div class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#microphone">Microphone and audio</a></li>
+        <li><a href="#use">How we use your data</a></li>
+        <li><a href="#legal-bases">Legal bases for processing (GDPR)</a></li>
+        <li><a href="#speech">Speech processing details</a></li>
+        <li><a href="#reminders">Reminders</a></li>
+        <li><a href="#security">Data storage and security</a></li>
+        <li><a href="#sharing">Data sharing</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#rights">Your privacy rights</a></li>
+        <li><a href="#deletion">Data deletion</a></li>
+        <li><a href="#third-parties">Third-party services</a></li>
+        <li><a href="#tracking">Advertising, consent and tracking</a></li>
+        <li><a href="#us-states">US state privacy rights</a></li>
+        <li><a href="#transfers">International data transfers</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </div>
+
+    <h2 id="introduction">1. Introduction</h2>
+    <p>Welcome to <strong>Learn Dutch: Speak NL</strong> (the "App", "we", "us" or "our"). This Privacy Policy explains what information the App handles, why, who else processes it, and the rights you have.</p>
+    <p>The App is private by default: your learning progress lives on your device, there is no account to create, and we do not keep a profile of you on any server.</p>
+
+    <h2 id="collect">2. Information we collect</h2>
+    <h3>2.1 Data stored only on your device</h3>
+    <p>The App stores its data on your device with React Native AsyncStorage under the keys <code>learn_dutch_progress_v1</code>, <code>learn_dutch_notification_runtime_v1</code> and <code>speechConsentAt</code>. We never receive a copy. It includes:</p>
+    <ul>
+      <li><strong>Learning progress:</strong> completed lessons, words and phrases you have learned, phrase strength, review schedule and recent mistakes</li>
+      <li><strong>Streak and study history:</strong> study days, last study date and daily statistics</li>
+      <li><strong>App state:</strong> energy, coins, daily goal progress and smart reviews used today</li>
+      <li><strong>Preferences and onboarding answers:</strong> your app language, companion, the display name you choose, daily goal, reminder settings and the reason you gave for learning Dutch</li>
+      <li><strong>Subscription status:</strong> premium flag, plan type and expiry date, mirrored from RevenueCat</li>
+      <li><strong>Reminder state:</strong> which local reminders are scheduled and when one was last shown</li>
+      <li><strong>Speaking notice:</strong> the date you accepted the speaking-practice notice described in section 3</li>
+    </ul>
+    <p>Deleting the App, or using <strong>Reset journey</strong> in the App, removes this data. Reset journey clears lesson progress, phrase strength, streak, coins and today's goal.</p>
+
+    <h3>2.2 Audio from speaking exercises</h3>
+    <p>When you do a speaking exercise, the App records a short clip with your microphone. The clip is:</p>
+    <ul>
+      <li>sent over HTTPS to our speech service, a Supabase Edge Function</li>
+      <li>forwarded by that service to <strong>OpenAI's audio transcription API</strong>, which turns it into text so the App can compare what you said with the Dutch phrase</li>
+      <li>not stored, logged or kept by us once the result is returned</li>
+    </ul>
+    <p>OpenAI processes the audio as our sub-processor under its API terms. Audio sent through the API is not used to train OpenAI's models, and OpenAI keeps it only for a limited period for abuse monitoring. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.</p>
+
+    <h3>2.3 Speech service rate limiting</h3>
+    <p>To protect the speech service from abuse, it keeps a request counter per client for one-minute and one-day windows. The counter is keyed by a one-way SHA-256 hash of the network address the request came from. It holds no audio, no text, no readable IP address and nothing that identifies you.</p>
+
+    <h3>2.4 Subscription and purchase data (RevenueCat)</h3>
+    <p>If you buy a premium subscription, Apple or Google processes the payment and RevenueCat manages the subscription. RevenueCat may process:</p>
+    <ul>
+      <li>an anonymous app user identifier generated on your device</li>
+      <li>purchase transaction identifiers, product and price</li>
+      <li>subscription status, trial status and entitlement data</li>
+    </ul>
+    <p>We never receive your payment card details. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+
+    <h3>2.5 Advertising data (Google AdMob, free users)</h3>
+    <p>The free version shows ads served by Google AdMob. When an ad is requested, Google may process:</p>
+    <ul>
+      <li>device identifiers (on Android the advertising ID; on iOS an identifier for vendors, because the App does not request tracking permission and the iOS advertising identifier is not available)</li>
+      <li>IP address, which Google may use to estimate a general location</li>
+      <li>ad interactions such as impressions and taps</li>
+      <li>device information such as model and operating system version, plus diagnostic and performance data of the ads SDK</li>
+    </ul>
+    <p>The App asks Google for non-personalised ads only, so your interests and activity in other apps are not used to choose the ads you see. Premium subscribers do not see ads. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from apps that use its services</a>.</p>
+
+    <h3>2.6 Data we do not collect</h3>
+    <ul>
+      <li>Name, email address, phone number or account credentials (there is no sign-in)</li>
+      <li>Precise location</li>
+      <li>Contacts, calendar, photos or files</li>
+      <li>Stored voice recordings</li>
+      <li>Analytics or behavioural tracking of our own</li>
+    </ul>
+
+    <h3>2.7 CCPA categories of personal information</h3>
+    <table>
+      <tr><th>Category</th><th>Collected</th><th>Source</th></tr>
+      <tr><td>Identifiers (device or advertising ID, anonymous purchase ID)</td><td>Yes, by AdMob and RevenueCat</td><td>Your device</td></tr>
+      <tr><td>Commercial information (subscription purchases)</td><td>Yes, by RevenueCat</td><td>App Store or Google Play</td></tr>
+      <tr><td>Internet or network activity (ad interactions)</td><td>Yes, by AdMob, free users only</td><td>Your device</td></tr>
+      <tr><td>Audio (speaking exercises)</td><td>Processed transiently, not stored by us</td><td>Your microphone, when you record</td></tr>
+      <tr><td>Approximate location (from IP address)</td><td>By AdMob, for ads</td><td>Network request</td></tr>
+      <tr><td>Name, email, precise location, financial account details</td><td>No</td><td>&mdash;</td></tr>
+    </table>
+
+    <h2 id="microphone">3. Microphone and audio</h2>
+    <ul>
+      <li>Before your first speaking exercise, the App explains that your short recording is sent to our server and transcribed by OpenAI, and that we do not keep it. Recording starts only after you continue.</li>
+      <li>The App asks for microphone access only for speaking exercises.</li>
+      <li>The microphone records only while you hold or tap the record control in a speaking exercise. It never listens in the background.</li>
+      <li>Recordings travel over encrypted HTTPS and are used only to produce your pronunciation feedback.</li>
+      <li>You can withdraw microphone access at any time in your device settings and skip speaking exercises; the rest of the App keeps working.</li>
+    </ul>
+
+    <h2 id="use">4. How we use your data</h2>
+    <table>
+      <tr><th>Purpose</th><th>Data used</th><th>Legal basis (GDPR)</th></tr>
+      <tr><td>Deliver lessons and track your progress</td><td>Data on your device</td><td>Contract</td></tr>
+      <tr><td>Pronunciation feedback</td><td>Audio clip (transient), the Dutch phrase you practised</td><td>Contract; consent for microphone access</td></tr>
+      <tr><td>Protect the speech service from abuse</td><td>Hashed network address and request count</td><td>Legitimate interest</td></tr>
+      <tr><td>Manage premium subscriptions and trials</td><td>RevenueCat identifiers and purchase data</td><td>Contract</td></tr>
+      <tr><td>Show non-personalised ads to free users</td><td>Data processed by Google AdMob</td><td>Consent where the law requires it (EEA, UK, Switzerland); otherwise legitimate interest</td></tr>
+      <tr><td>Study reminders</td><td>Reminder settings on your device</td><td>Consent (notification permission)</td></tr>
+    </table>
+    <p>We do not make automated decisions that have legal or similarly significant effects on you.</p>
+
+    <h2 id="legal-bases">5. Legal bases for processing (GDPR)</h2>
+    <p>If you are in the European Economic Area, the UK or Switzerland, we rely on:</p>
+    <ul>
+      <li><strong>Contract:</strong> providing the learning service and subscriptions you ask for.</li>
+      <li><strong>Consent:</strong> microphone access, notifications, and storing or reading information on your device for ads. You can withdraw consent at any time in the App or in your device settings.</li>
+      <li><strong>Legitimate interests:</strong> preventing abuse of the speech service and showing non-personalised ads that keep the free version free.</li>
+      <li><strong>Legal obligation:</strong> complying with applicable law.</li>
+    </ul>
+
+    <h2 id="speech">6. Speech processing details</h2>
+    <p><strong>What the App sends:</strong></p>
+    <ul>
+      <li>the audio clip (base64 encoded, usually 2 to 10 seconds)</li>
+      <li>the Dutch phrase you were asked to say (for example "Goedemorgen") and its pronunciation hint</li>
+      <li>the language code (<code>nl</code>), the audio format and the phrase's internal identifier</li>
+    </ul>
+    <p><strong>What comes back:</strong> a transcript, a similarity score and normalised text.</p>
+    <p><strong>What we keep:</strong> nothing from the request. The Edge Function processes it in memory. The only record is the anonymous rate-limit counter described in section 2.3.</p>
+    <p>All traffic to the speech service and to OpenAI uses HTTPS with TLS encryption.</p>
+
+    <h2 id="reminders">7. Reminders</h2>
+    <p>Study reminders are scheduled on your device as local notifications. The App does not register for remote push notifications and sends no device token to us. You can turn reminders off in the App or in your device settings.</p>
+
+    <h2 id="security">8. Data storage and security</h2>
+    <ul>
+      <li><strong>On your device:</strong> stored in the App's sandboxed storage and protected by your device's security, including encryption at rest on current iOS and Android versions.</li>
+      <li><strong>Speech service (Supabase):</strong> requests travel over TLS; audio is not persisted. See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
+      <li><strong>Subscriptions (RevenueCat):</strong> stored on RevenueCat's servers with industry-standard encryption.</li>
+      <li><strong>Ads (Google AdMob):</strong> handled on Google's infrastructure.</li>
+    </ul>
+    <p>No system is completely secure. If you find a security issue, please email us right away.</p>
+
+    <h2 id="sharing">9. Data sharing</h2>
+    <p>We do not sell, rent or trade personal information. Data is shared only with:</p>
+    <ul>
+      <li><strong>Supabase</strong>, which hosts the speech service (processor; audio not retained)</li>
+      <li><strong>OpenAI</strong>, which transcribes speaking clips (sub-processor; not used for training)</li>
+      <li><strong>RevenueCat</strong>, which manages subscriptions (processor)</li>
+      <li><strong>Google AdMob</strong>, which serves ads to free users (independent controller for advertising data)</li>
+      <li><strong>Apple and Google</strong>, which distribute the App and process in-app purchases</li>
+      <li>authorities, where the law requires it, or a successor in the event of a merger or acquisition, in which case you will be told in advance</li>
+    </ul>
+
+    <h2 id="retention">10. Data retention</h2>
+    <ul>
+      <li><strong>Data on your device:</strong> until you delete the App or use Reset journey. We have no copy.</li>
+      <li><strong>Speech audio:</strong> not retained by us; discarded as soon as the result is returned. OpenAI keeps API data only for a limited period for abuse monitoring.</li>
+      <li><strong>Rate-limit counters:</strong> deleted after at most 30 days.</li>
+      <li><strong>RevenueCat:</strong> for the life of your subscription plus RevenueCat's legal retention period.</li>
+      <li><strong>Google AdMob:</strong> according to Google's retention policies.</li>
+    </ul>
+
+    <h2 id="rights">11. Your privacy rights</h2>
+    <p>Depending on where you live, you can ask to access, correct, delete or receive a copy of your personal data, restrict or object to processing, and withdraw consent at any time. Most of your data sits on your device and can be changed or deleted there directly. For data held by RevenueCat or our speech service, email us.</p>
+    <p>If you are in the EEA, the UK or Switzerland you may also complain to your data protection authority, for example the Dutch <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a> or the Bulgarian <a href="https://www.cpdp.bg" target="_blank" rel="noopener">Commission for Personal Data Protection</a>.</p>
+    <p>To exercise a right, email <a href="mailto:bora.nikolai.mindwise@gmail.com">bora.nikolai.mindwise@gmail.com</a> with the subject "Privacy Rights Request". We reply within 30 days (up to 45 days for complex requests). Exercising your rights never changes the service you receive.</p>
+
+    <h2 id="deletion">12. Data deletion</h2>
+    <ul>
+      <li><strong>Progress on your device:</strong> use Reset journey in the App (Progress tab), or delete the App. On Android you can also clear the App's storage in system settings.</li>
+      <li><strong>Subscription history at RevenueCat:</strong> email us with the subject "Data Deletion Request" and we will ask RevenueCat to delete it.</li>
+      <li><strong>Advertising:</strong> see section 14.</li>
+    </ul>
+    <p>Step-by-step instructions are in our <a href="data-deletion.html">Data Deletion Guide</a>.</p>
+
+    <h2 id="third-parties">13. Third-party services</h2>
+    <table>
+      <tr><th>Service</th><th>Purpose</th><th>Data</th><th>Privacy policy</th></tr>
+      <tr><td>Supabase</td><td>Hosts the speech service</td><td>Audio clip and phrase text (transient), hashed address counter</td><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
+      <tr><td>OpenAI</td><td>Speech-to-text for pronunciation feedback</td><td>Audio clip and phrase text (transient)</td><td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a></td></tr>
+      <tr><td>RevenueCat</td><td>Subscriptions and trials</td><td>Anonymous user ID, purchase data</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
+      <tr><td>Google AdMob</td><td>Ads for free users and the consent message</td><td>Device identifiers, IP address, ad interactions, device and diagnostic data</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+      <tr><td>Apple App Store</td><td>Distribution and in-app purchases</td><td>Purchase records</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
+      <tr><td>Google Play</td><td>Distribution and in-app purchases</td><td>Purchase records</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+    </table>
+
+    <h2 id="tracking">14. Advertising, consent and tracking</h2>
+    <p>The App uses no cookies and no tracking of its own. Advertising works as follows:</p>
+    <ul>
+      <li><strong>EEA, UK and Switzerland:</strong> before any ad is requested, Google's consent message asks how Google and its partners may store and use information for ads, for example to measure ad performance. You can change your choices at any time with <strong>Privacy choices</strong> in the Progress tab.</li>
+        <li><strong>Everywhere:</strong> the App requests non-personalised ads only. Ads are chosen from context such as the App itself, not from a profile of you.</li>
+      <li><strong>iOS:</strong> the App does not request App Tracking Transparency permission, so the iOS advertising identifier is not shared and the App does not track you across other companies' apps and websites.</li>
+      <li><strong>Android:</strong> you can reset or delete your advertising ID in Settings &gt; Google &gt; Ads (or Settings &gt; Privacy &gt; Ads).</li>
+    </ul>
+    <p>The App does not respond to browser Do-Not-Track signals because it is not a website; use the controls above instead.</p>
+
+    <h2 id="us-states">15. US state privacy rights</h2>
+    <p>Residents of California, Virginia, Colorado, Connecticut, Utah and other US states with privacy laws have rights to know, access, correct, delete and port their personal data and to opt out of targeted advertising, sale or profiling. We do not sell personal information and do not share it for cross-context behavioural advertising outside the advertising described in section 14. Email <a href="mailto:bora.nikolai.mindwise@gmail.com">bora.nikolai.mindwise@gmail.com</a> with your state and request; we respond within 45 days. If we deny a request you may appeal by replying with "Privacy Rights Appeal" in the subject, and then contact your state attorney general.</p>
+
+    <h2 id="transfers">16. International data transfers</h2>
+    <p>The App is operated from Bulgaria. Supabase, OpenAI, RevenueCat and Google may process data in the United States and other countries. Where GDPR requires it, these transfers rely on the EU-US Data Privacy Framework or Standard Contractual Clauses. Email us for details.</p>
+
+    <h2 id="children">17. Children's privacy</h2>
+    <p>The App is not directed at children under 13 (or under 16 in the EEA). We do not knowingly collect personal information from children. If you believe a child has provided personal information through the App, email us and we will act promptly.</p>
+
+    <h2 id="changes">18. Changes to this policy</h2>
+    <p>We may update this policy. The "Last updated" date at the top shows the latest version. For material changes we will give notice in the App or on this page.</p>
+
+    <h2 id="contact">19. Contact us</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:bora.nikolai.mindwise@gmail.com">bora.nikolai.mindwise@gmail.com</a></p>
+      <p><strong>Location:</strong> Bulgaria</p>
+      <p>Use the subject "Privacy Request" and tell us which right you want to exercise. We reply within 30 days.</p>
+    </div>
+
+    <a href="index.html" class="back-link">Back to legal documents</a>
+    <div class="footer">
+      <p>&copy; 2026 Learn Dutch: Speak NL. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
