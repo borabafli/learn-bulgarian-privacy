@@ -74,7 +74,7 @@ tr:nth-child(even) td { background: #FAF8F2; }
   <div class="container">
 
     <h1>Privacy Policy</h1>
-    <p class="subtitle"><strong>Learn Dutch: Speak NL</strong> &mdash; Last updated: October 1, 2026</p>
+    <p class="subtitle"><strong>Learn Dutch: Speak NL</strong> &mdash; Last updated: October 2, 2026</p>
 
     <div class="summary-box">
       <h3>Privacy at a glance</h3>
@@ -135,13 +135,13 @@ tr:nth-child(even) td { background: #FAF8F2; }
     <p>When you do a speaking exercise, the App records a short clip with your microphone. The clip is:</p>
     <ul>
       <li>sent over HTTPS to our speech service, a Supabase Edge Function</li>
-      <li>forwarded by that service to <strong>OpenAI's audio transcription API</strong>, which turns it into text so the App can compare what you said with the Dutch phrase</li>
+      <li>forwarded by that service to <strong>OpenAI's audio transcription API</strong>, which turns it into text; only the audio and a neutral instruction go to OpenAI, and our service then compares the text with the Dutch phrase</li>
       <li>not stored, logged or kept by us once the result is returned</li>
     </ul>
     <p>OpenAI processes the audio as our sub-processor under its API terms. Audio sent through the API is not used to train OpenAI's models, and OpenAI keeps it only for a limited period for abuse monitoring. See <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.</p>
 
     <h3>2.3 Speech service rate limiting</h3>
-    <p>To protect the speech service from abuse, it keeps a request counter per client for one-minute and one-day windows. The counter is keyed by a one-way SHA-256 hash of the network address the request came from. It holds no audio, no text, no readable IP address and nothing that identifies you.</p>
+    <p>To protect the speech service from abuse, it keeps a request counter per client for one-minute and one-day windows, plus one total daily count for the whole service. The per-client counter is keyed by a one-way SHA-256 hash of the network address the request came from. It holds no audio, no text, no readable IP address and nothing that identifies you.</p>
 
     <h3>2.4 Subscription and purchase data (RevenueCat)</h3>
     <p>If you buy a premium subscription, Apple or Google processes the payment and RevenueCat manages the subscription. RevenueCat may process:</p>
@@ -219,12 +219,14 @@ tr:nth-child(even) td { background: #FAF8F2; }
       <li>the Dutch phrase you were asked to say (for example "Goedemorgen") and its pronunciation hint</li>
       <li>the language code (<code>nl</code>), the audio format and the phrase's internal identifier</li>
     </ul>
+    <p><strong>What goes to OpenAI:</strong> only the audio clip and a neutral instruction ("Dutch speech from a language learner"). The phrase text stays on our server, where it is used to score the transcript.</p>
     <p><strong>What comes back:</strong> a transcript, a similarity score and normalised text.</p>
     <p><strong>What we keep:</strong> nothing from the request. The Edge Function processes it in memory. The only record is the anonymous rate-limit counter described in section 2.3.</p>
     <p>All traffic to the speech service and to OpenAI uses HTTPS with TLS encryption.</p>
 
     <h2 id="reminders">7. Reminders</h2>
     <p>Study reminders are scheduled on your device as local notifications. The App does not register for remote push notifications and sends no device token to us. You can turn reminders off in the App or in your device settings.</p>
+    <p>During a free trial, study reminders pause. Instead, if notifications are allowed, the App schedules one reminder about a day before the trial ends, so you can decide whether to keep the subscription. Study reminders resume after the trial.</p>
 
     <h2 id="security">8. Data storage and security</h2>
     <ul>
@@ -272,7 +274,7 @@ tr:nth-child(even) td { background: #FAF8F2; }
     <table>
       <tr><th>Service</th><th>Purpose</th><th>Data</th><th>Privacy policy</th></tr>
       <tr><td>Supabase</td><td>Hosts the speech service</td><td>Audio clip and phrase text (transient), hashed address counter</td><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
-      <tr><td>OpenAI</td><td>Speech-to-text for pronunciation feedback</td><td>Audio clip and phrase text (transient)</td><td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a></td></tr>
+      <tr><td>OpenAI</td><td>Speech-to-text for pronunciation feedback</td><td>Audio clip (transient)</td><td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a></td></tr>
       <tr><td>RevenueCat</td><td>Subscriptions and trials</td><td>Anonymous user ID, purchase data</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
       <tr><td>Google AdMob</td><td>Ads for free users and the consent message</td><td>Device identifiers, IP address, ad interactions, device and diagnostic data</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
       <tr><td>Apple App Store</td><td>Distribution and in-app purchases</td><td>Purchase records</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
